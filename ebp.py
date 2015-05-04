@@ -59,7 +59,7 @@ def makeCSV():
 			if discount != '0': # ebooki tylko ze znizka
 				#author = element.getAttribute('autor')
 				author = element.getAttribute('autor').encode('windows-1250', 'ignore')
-				title = element.getAttribute('tytul').encode('windows-1250')
+				title = element.getAttribute('tytul').encode('windows-1250', 'ignore')
 				bargain = element.getAttribute('cena').encode('windows-1250')
 				price = element.getAttribute('cenadetaliczna')
 				yousave = str(round(float(price),2)-round(float(bargain),2))
